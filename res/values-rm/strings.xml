@@ -3081,4 +3081,5 @@
     <!-- no translation found for user_image_choose_photo (3746334626214970837) -->
     <skip />
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="power_off" msgid="4266614107412865048">"Serrar"</string>
 </resources>
