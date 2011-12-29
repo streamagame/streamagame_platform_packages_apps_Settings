@@ -3788,4 +3788,6 @@ found in the list of installed apps.</string>
     "system_update_settings_list_item_title" in this project. [CHAR LIMIT=25] -->
     <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
 
+    <!-- Main settings screen, setting title for the user to go into the About phone screen -->
+    <string name="power_off">Power Off</string>
 </resources>

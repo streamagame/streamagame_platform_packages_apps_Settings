@@ -1580,4 +1580,5 @@
     <string name="backup_pw_cancel_button_text" msgid="8845630125391744615">"취소"</string>
     <string name="percentage" msgid="5866131581207788624">"<xliff:g id="NUMBER">%d</xliff:g>%%"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"추가 시스템 업데이트"</string>
+    <string name="power_off" msgid="4266614107412865048">"종료"</string>
 </resources>

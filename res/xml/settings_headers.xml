@@ -182,4 +182,12 @@
         android:icon="@drawable/ic_settings_about"
         android:title="@string/about_settings" />
 
+    <!-- Power Off -->
+    <header
+        android:id="@+id/poweroff"
+        android:fragment="com.android.settings.PowerOff"
+        android:icon="@drawable/ic_settings_poweroff"
+        android:title="@string/power_off" >
+	<intent android:action="com.android.settings.PowerOff" />
+    </header>
 </preference-headers>

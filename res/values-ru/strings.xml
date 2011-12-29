@@ -1582,4 +1582,5 @@
     <!-- no translation found for percentage (5866131581207788624) -->
     <skip />
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"Дополнительные обновления системы"</string>
+    <string name="power_off" msgid="4266614107412865048">"Выключение"</string>
 </resources>

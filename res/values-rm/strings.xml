@@ -2411,4 +2411,5 @@
     <skip />
     <!-- no translation found for additional_system_update_settings_list_item_title (214987609894661992) -->
     <skip />
+    <string name="power_off" msgid="4266614107412865048">"Serrar"</string>
 </resources>
