@@ -2566,6 +2566,12 @@ found in the list of installed apps.</string>
     <string name="hardkeyboard_category">Physical keyboard settings</string>
     <!-- On Text & language settings screen, setting summary for the Auto-punctuate setting. -->
     <string name="auto_punctuate_summary">Press Space key twice to insert \u0022.\u0022</string>
+    <!-- On Text & language settings screen, option for physical keyboard layout -->
+    <string name="hardware_keyboard_layout_title">Physical keyboard layout</string>
+    <!-- On Text & language settings screen, title for physical keyboard layout selection dialog -->
+    <string name="hardware_keyboard_layout_dialog_title">Select physical keyboard layout</string>
+    <!-- On Text & language settings screen, option for physical keyboard layout -->
+    <string name="hardware_keyboard_layout_changed">Physical keyboard layout has been changed. This change is NOT effective for previously started apps. It is recommended to restart your device to fully apply the new layout.</string>
     <!-- On Security & location settings screen, setting check box name. Title of the checkbox to set whether password edit fields will show the most recent character typed and then hide it, or just hide it right away.  By hide, I mean mask it out. -->
     <string name="show_password">Make passwords visible</string>
     <!-- On Security & location settings screen, setting check box summary. Summary for the visible passwords setting. -->

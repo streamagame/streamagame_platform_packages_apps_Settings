@@ -31,6 +31,7 @@ import android.content.res.Configuration;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -42,6 +43,7 @@ import android.provider.Settings.System;
 import android.text.TextUtils;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -58,6 +60,10 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
 
+    private static final String KEY_HARDWARE_KEYBOARD_LAYOUT_SELECTOR =
+        "hardware_keyboard_layout_selector";
+    private static final String PROP_HARDWARE_KEYBOARD_LAYOUT = "persist.sys.keyboard.locale";
+
     private static final String[] sSystemSettingNames = {
         System.TEXT_AUTO_REPLACE, System.TEXT_AUTO_CAPS, System.TEXT_AUTO_PUNCTUATE,
     };
@@ -73,6 +79,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             new ArrayList<InputMethodPreference>();
     private boolean mHaveHardKeyboard;
     private PreferenceCategory mHardKeyboardCategory;
+    private ListPreference mHardKeyboardLayoutSelectorPref;
     private InputMethodManager mImm;
     private List<InputMethodInfo> mImis;
     private boolean mIsOnlyImeSettings;
@@ -196,6 +203,8 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                 chkPref.setChecked(
                         System.getInt(getContentResolver(), sSystemSettingNames[i], 1) > 0);
             }
+
+            updateHardKeyboardLayout(SystemProperties.get(PROP_HARDWARE_KEYBOARD_LAYOUT));
         }
 
         // IME
@@ -259,6 +268,25 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                 mDefaultInputMethodSelectorVisibility);
     }
 
+    private void updateHardKeyboardLayout(String value) {
+        // selector of hardware keyboard layout
+        mHardKeyboardLayoutSelectorPref = (ListPreference) mHardKeyboardCategory.findPreference(
+            KEY_HARDWARE_KEYBOARD_LAYOUT_SELECTOR);
+        int index = 0; // defaults to "follow system language"
+        String[] values = getResources().getStringArray(R.array.hardware_keyboard_layout_keys);
+        String[] summaries = getResources().getStringArray(
+            R.array.hardware_keyboard_layout_titles);
+        for (int i = 0; i < values.length; i++) {
+            if (value.equals(values[i])) {
+                index = i;
+                break;
+            }
+        }
+        mHardKeyboardLayoutSelectorPref.setValue(values[index]);
+        mHardKeyboardLayoutSelectorPref.setSummary(summaries[index]);
+        mHardKeyboardLayoutSelectorPref.setOnPreferenceChangeListener(this);
+    }
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
         if (SHOW_INPUT_METHOD_SWITCHER_SETTINGS) {
@@ -267,6 +295,14 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                     saveInputMethodSelectorVisibility((String)value);
                 }
             }
+        }
+        if (preference == mHardKeyboardLayoutSelectorPref) {
+            SystemProperties.set(PROP_HARDWARE_KEYBOARD_LAYOUT, value.toString());
+            Settings.System.putString(getContentResolver(), Settings.System.HARD_KEYBOARD_LAYOUT,
+                value.toString());
+            Toast.makeText(getActivity(), R.string.hardware_keyboard_layout_changed,
+                Toast.LENGTH_LONG).show();
+            updateHardKeyboardLayout(value.toString());
         }
         return false;
     }

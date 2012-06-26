@@ -602,6 +602,24 @@
         <item>Always use HDCP checking</item>
     </string-array>
 
+    <!-- Titles for hardware keyboard layout preference. -->
+    <string-array name="hardware_keyboard_layout_titles">
+        <item>Use system language</item>
+        <item>English</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Russian</item>
+    </string-array>
+
+    <!-- Values for hardware keyboard layout preference. -->
+    <string-array name="hardware_keyboard_layout_keys" translatable="false" >
+        <item>sys</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>ru</item>
+    </string-array>
+
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
     <string-array name="window_animation_scale_entries">
         <item>Animation off</item>
