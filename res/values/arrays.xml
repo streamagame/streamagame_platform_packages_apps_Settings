@@ -608,6 +608,7 @@
         <item>English</item>
         <item>French</item>
         <item>German</item>
+        <item>Italian</item>
         <item>Russian</item>
     </string-array>
 
@@ -617,6 +618,7 @@
         <item>en</item>
         <item>fr</item>
         <item>de</item>
+        <item>it</item>
         <item>ru</item>
     </string-array>
 
