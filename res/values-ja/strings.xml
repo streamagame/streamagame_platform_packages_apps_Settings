@@ -1082,6 +1082,9 @@
     <string name="auto_punctuate" msgid="4595367243950425833">"ピリオド自動挿入"</string>
     <string name="hardkeyboard_category" msgid="5957168411305769899">"キーボードの設定"</string>
     <string name="auto_punctuate_summary" msgid="4372126865670574837">"英語: Spaceキー2回でピリオド(.)を挿入"</string>
+    <string name="hardware_keyboard_layout_title">キーボードのレイアウト</string>
+    <string name="hardware_keyboard_layout_dialog_title">キーボードのレイアウトを選択してください。</string>
+    <string name="hardware_keyboard_layout_changed">キーボードのレイアウトが変更されました。この変更はすでに動作しているアプリケーションには効果がありません。すべてのアプリケーションで変更を有効にするには、端末の再起動を行なって下さい。</string>
     <string name="show_password" msgid="3001113966880559611">"パスワードを表示する"</string>
     <string name="show_password_summary" msgid="7345931695292850058"></string>
     <string name="ime_security_warning" msgid="4135828934735934248">"この入力方法を選択すると、すべての入力内容の収集をアプリ（<xliff:g id="IME_APPLICATION_NAME">%1$s</xliff:g>）に許可することになります。これにはパスワードやクレジットカード番号などの個人情報も含まれます。この入力方法を使用しますか？"</string>

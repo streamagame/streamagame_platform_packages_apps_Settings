@@ -609,6 +609,7 @@
         <item>French</item>
         <item>German</item>
         <item>Italian</item>
+        <item>Japanese</item>
         <item>Russian</item>
     </string-array>
 
@@ -619,6 +620,7 @@
         <item>fr</item>
         <item>de</item>
         <item>it</item>
+        <item>ja</item>
         <item>ru</item>
     </string-array>
 
