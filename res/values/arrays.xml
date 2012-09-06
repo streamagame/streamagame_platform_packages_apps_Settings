@@ -611,6 +611,7 @@
         <item>Italian</item>
         <item>Japanese</item>
         <item>Russian</item>
+        <item>Spanish (Spain)</item>
     </string-array>
 
     <!-- Values for hardware keyboard layout preference. -->
@@ -622,6 +623,7 @@
         <item>it</item>
         <item>ja</item>
         <item>ru</item>
+        <item>es_ES</item>
     </string-array>
 
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
