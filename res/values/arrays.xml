@@ -605,25 +605,43 @@
     <!-- Titles for hardware keyboard layout preference. -->
     <string-array name="hardware_keyboard_layout_titles">
         <item>Use system language</item>
-        <item>English</item>
-        <item>French</item>
-        <item>German</item>
+        <item>Danish (Denmark)</item>
+        <item>Dutch (Netherlands)</item>
+        <item>English (Britain)</item>
+        <item>English (US)</item>
+        <item>French (Belgium)</item>
+        <item>French (Switzerland)</item>
+        <item>French (France)</item>
+        <item>German (Switzerland)</item>
+        <item>German (Germany)</item>
         <item>Italian</item>
         <item>Japanese</item>
+        <item>Portuguese (Brazil)</item>
+        <item>Portuguese (Portugal)</item>
         <item>Russian</item>
         <item>Spanish (Spain)</item>
+        <item>Spanish (US)</item>
     </string-array>
 
     <!-- Values for hardware keyboard layout preference. -->
     <string-array name="hardware_keyboard_layout_keys" translatable="false" >
         <item>sys</item>
-        <item>en</item>
-        <item>fr</item>
-        <item>de</item>
-        <item>it</item>
+        <item>da_DK</item>
+        <item>nl_NL</item>
+        <item>en_GB</item>
+        <item>en_US</item>
+        <item>fr_BE</item>
+        <item>fr_CH</item>
+        <item>fr_FR</item>
+        <item>de_CH</item>
+        <item>de_DE</item>
+        <item>it_IT</item>
         <item>ja</item>
-        <item>ru</item>
+        <item>pt_BR</item>
+        <item>pt_PT</item>
+        <item>ru_RU</item>
         <item>es_ES</item>
+        <item>es_US</item>
     </string-array>
 
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
